@@ -5,6 +5,10 @@ import './Portfolio.css';
 function Portfolio() {
   const [currentView, setCurrentView] = useState('home');
 
+  const handleNavigation = (view) => {
+    setCurrentView(view);
+  };
+
   const renderContent = () => {
     switch(currentView) {
       case 'home':
@@ -63,9 +67,9 @@ function Portfolio() {
           <div className="contact-view">
             <h1>Contact Me</h1>
             <div className="contact-details">
-              <p>Email: <a href="mailto:jonel@example.com">jonel@example.com</a></p>
-              <p>LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/jonel</a></p>
-              <p>GitHub: <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/jonel</a></p>
+              <p>Email: <a href="mailto:akosijonel04@gmail.com">akosijonel04@gmail.com</a></p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/castillo-jonel-almazan-7a29091b9/" target="_blank" rel="noopener noreferrer">linkedin.com/in/castillo-jonel-almazan</a></p>
+              <p>GitHub: <a href="https://github.com/jooo1104" target="_blank" rel="noopener noreferrer">github.com/jooo1104</a></p>
             </div>
             <button 
               className="back-button"
@@ -93,14 +97,44 @@ function Portfolio() {
 
   return (
     <div className="portfolio-container">
-      {/* Navigation */}
+      {/* Navigation - Updated with active state */}
       <nav className="simple-nav">
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('home'); }}>Home</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('about'); }}>About</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('projects'); }}>Projects</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('tools'); }}>Tools</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('role'); }}>My Role</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentView('contact'); }}>Contacts</a>
+        <button 
+          className={`nav-button ${currentView === 'home' ? 'active' : ''}`}
+          onClick={() => handleNavigation('home')}
+        >
+          Home
+        </button>
+        <button 
+          className={`nav-button ${currentView === 'about' ? 'active' : ''}`}
+          onClick={() => handleNavigation('about')}
+        >
+          About
+        </button>
+        <button 
+          className={`nav-button ${currentView === 'projects' ? 'active' : ''}`}
+          onClick={() => handleNavigation('projects')}
+        >
+          Projects
+        </button>
+        <button 
+          className={`nav-button ${currentView === 'tools' ? 'active' : ''}`}
+          onClick={() => handleNavigation('tools')}
+        >
+          Tools
+        </button>
+        <button 
+          className={`nav-button ${currentView === 'role' ? 'active' : ''}`}
+          onClick={() => handleNavigation('role')}
+        >
+          My Role
+        </button>
+        <button 
+          className={`nav-button ${currentView === 'contact' ? 'active' : ''}`}
+          onClick={() => handleNavigation('contact')}
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Main Content */}

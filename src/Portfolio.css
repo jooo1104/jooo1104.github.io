@@ -1,9 +1,20 @@
-/* Exact replica of the reference layout */
-body {
+/* Modern clean color scheme */
+:root {
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-dark: #2d3748;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --primary-color: #4299e1;
+    --primary-dark: #3182ce;
+    --border-color: #e2e8f0;
+  }
+  
+  body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
     line-height: 1.5;
   }
   
@@ -13,25 +24,66 @@ body {
     padding: 40px 20px;
   }
   
-  /* Navigation */
+/* Navigation */
+.simple-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--text-medium);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  color: var(--primary-color);
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.nav-button.active {
+  color: var(--primary-color);
+  background-color: rgba(66, 153, 225, 0.1);
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .simple-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 10px;
   }
   
-  .simple-nav a {
-    color: #333333;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
+  .nav-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-nav {
+    gap: 10px;
   }
   
-  .simple-nav a:hover {
-    color: #2563eb;
+  .nav-button {
+    padding: 5px 10px;
+    font-size: 13px;
   }
-  
+}
   /* Content */
   .portfolio-content {
     text-align: center;
@@ -41,20 +93,20 @@ body {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #222222;
+    color: var(--text-dark);
   }
   
   .portfolio-content h2 {
     font-size: 20px;
     font-weight: 400;
-    color: #666666;
+    color: var(--text-medium);
     margin-bottom: 40px;
   }
   
   .description {
     font-size: 16px;
     line-height: 1.8;
-    color: #555555;
+    color: var(--text-light);
     max-width: 600px;
     margin: 0 auto 40px;
   }
@@ -72,36 +124,36 @@ body {
   }
   
   .resume-button {
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     margin-bottom: 40px;
   }
   
   .resume-button:hover {
-    background-color: #1e40af;
+    background-color: var(--primary-dark);
   }
   
   .work-button {
     background-color: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
   }
   
   .work-button:hover {
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: white;
   }
   
   .back-button {
     background-color: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     margin-top: 20px;
   }
   
   .back-button:hover {
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: white;
   }
   
@@ -119,19 +171,21 @@ body {
   }
   
   .project-card {
-    background: #f8f9fa;
+    background: var(--card-bg);
     padding: 20px;
     border-radius: 8px;
     text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
   }
   
   .project-card h3 {
-    color: #222222;
+    color: var(--text-dark);
     margin-bottom: 10px;
   }
   
   .project-card p {
-    color: #555555;
+    color: var(--text-medium);
   }
   
   /* Contact View */
@@ -148,10 +202,11 @@ body {
   .contact-details p {
     margin-bottom: 15px;
     font-size: 16px;
+    color: var(--text-medium);
   }
   
   .contact-details a {
-    color: #2563eb;
+    color: var(--primary-color);
     text-decoration: none;
   }
   
