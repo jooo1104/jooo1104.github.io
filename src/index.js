@@ -36,65 +36,96 @@ function Portfolio() {
             </button>
           </>
         );
-// In your index.js, update the projects case in the renderContent function:
-case 'projects':
-  return (
-    <div className="projects-view">
-      <div className="projects-list">
-        <div className="project-card">
-          <h3>BOAT-A-LITY: IoT Water Quality Monitor</h3>
-          <p>An IoT-based remote-controlled boat system for monitoring water quality in fish cages</p>
-          <div className="project-links">
-            <a 
-              href="https://boat-a-lity.web.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="project-link-button"
-            >
-              View Project
-            </a>
-          </div>
-          <div className="project-details">
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Monitors dissolved oxygen, pH, and temperature in real-time</li>
-              <li>500m operational range with remote control</li>
-              <li>Cloud data storage and web-based analytics</li>
-              <li>GPS mapping for location tracking</li>
-              <li>Helps prevent fish kills through proactive monitoring</li>
-            </ul>
-          </div>
-        </div>
-        {/* Rest of your project cards */}
-      </div>
       
-    </div>
-  );
-  case 'contact':
-    return (
-      <div className="contact-view">
-        <div className="contact-container">
-          <div className="contact-card">
-            <div className="contact-details">
-              <p>Email: <a href="mailto:akosijonel04@gmail.com">akosijonel04@gmail.com</a></p>
-              <p>LinkedIn: <a href="https://www.linkedin.com/in/castillo-jonel-almazan-7a29091b9/" target="_blank" rel="noopener noreferrer">linkedin.com/in/castillo-jonel-almazan</a></p>
-              <p>GitHub: <a href="https://github.com/jooo1104" target="_blank" rel="noopener noreferrer">github.com/jooo1104</a></p>
+      case 'about':
+        return (
+          <div className="about-view">
+            <div className="about-content">
+              <p>
+                Hi! I'm Jonel Almazan Castillo. 
+                I'm a fresh graduate with a Bachelor's degree in IT, 
+                Major in Network Technology from Batangas State University, 
+                eager to launch my career in software quality assurance and automation.
+              </p>
+              
+              <h3>My Journey into IT </h3>
+              <p>
+                During my studies, I developed a strong foundation in network systems, programming, 
+                and troubleshooting. Now, I'm channeling that technical expertise into 
+                 software testing, where I combine my analytical mindset with a 
+                passion for ensuring seamless user experiences. Though new to the field, I'm diving 
+                deep into manual testing principles and automation tools 
+                to build robust testing strategies.
+              </p>
+              <h3>My Values & Passion</h3>
+              <ul>
+                <li><strong>Curiosity</strong>: I thrive on dissecting how systems work and where they can break.</li>
+                <li><strong>Adaptability</strong>: My network tech background taught me to solve problems flexibly.</li>
+                <li><strong>Growth</strong>: I'm committed to upskilling in automation frameworks and best practices.</li>
+              </ul>
+              
+              <h3>Fun Fact</h3>
+              <p>
+                I love tackling challenges head-on—whether it's debugging code, optimizing networks, 
+                or learning a new tool over coffee!
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    );  
+        );
+
+      case 'projects':
+        return (
+          <div className="projects-view">
+            <div className="projects-list">
+              <div className="project-card">
+                <h3>BOAT-A-LITY: IoT Water Quality Monitor</h3>
+                <p>An IoT-based remote-controlled boat system for monitoring water quality in fish cages</p>
+                <div className="project-links">
+                  <a 
+                    href="https://boat-a-lity.web.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link-button"
+                  >
+                    View Project
+                  </a>
+                </div>
+                <div className="project-details">
+                  <h4>Key Features:</h4>
+                  <ul>
+                    <li>Monitors dissolved oxygen, pH, and temperature in real-time</li>
+                    <li>500m operational range with remote control</li>
+                    <li>Cloud data storage and web-based analytics</li>
+                    <li>GPS mapping for location tracking</li>
+                    <li>Helps prevent fish kills through proactive monitoring</li>
+                  </ul>
+                </div>
+              </div>
+              {/* Rest of your project cards */}
+            </div>
+          </div>
+        );
+      
+      case 'contact':
+        return (
+          <div className="contact-view">
+            <div className="contact-container">
+              <div className="contact-card">
+                <div className="contact-details">
+                  <p>Email: <a href="mailto:akosijonel04@gmail.com">akosijonel04@gmail.com</a></p>
+                  <p>LinkedIn: <a href="https://www.linkedin.com/in/castillo-jonel-almazan-7a29091b9/" target="_blank" rel="noopener noreferrer">linkedin.com/in/castillo-jonel-almazan</a></p>
+                  <p>GitHub: <a href="https://github.com/jooo1104" target="_blank" rel="noopener noreferrer">github.com/jooo1104</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
       default:
         return (
           <>
             <h1>{currentView.charAt(0).toUpperCase() + currentView.slice(1)}</h1>
             <p className="description">This section is under construction.</p>
-            <button 
-              className="back-button"
-              onClick={() => setCurrentView('home')}
-            >
-              Back to Home
-            </button>
           </>
         );
     }
