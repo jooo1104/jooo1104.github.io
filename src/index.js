@@ -15,17 +15,18 @@ function Portfolio() {
         return (
           <>
             <h1>Jonel Almazan Castillo</h1>
-            <h2>Web Developer | React Enthusiast | UI/UX Designer</h2>
+            <h2>Future Software Engineer || Future Quality Automation Engineer</h2>
             
             <button className="resume-button">
               View Resume & Cover Letter
             </button>
 
             <p className="description">
-              Passionate about creating beautiful, functional web applications with clean code 
-              and intuitive user interfaces. Experienced in frontend development using React, 
-              building responsive designs with modern CSS, and working with REST APIs. Currently 
-              exploring full-stack development to expand my expertise.
+            Driven by a passion for building reliable, high-quality software that not only works — but works well.
+             Skilled in frontend development with React and modern CSS, and experienced in integrating REST APIs. 
+             Currently expanding into full-stack development and test automation to strengthen my ability to build and ensure robust,
+             scalable applications. I’m especially interested in creating seamless user experiences while maintaining high standards 
+             of code quality, testing, and performance.
             </p>
 
             <button 
@@ -64,7 +65,7 @@ function Portfolio() {
                 <li><strong>Growth</strong>: I'm committed to upskilling in automation frameworks and best practices.</li>
               </ul>
               
-              <h3>Fun Fact</h3>
+              <h3>Fun Fact About me</h3>
               <p>
                 I love tackling challenges head-on—whether it's debugging code, optimizing networks, 
                 or learning a new tool over coffee!
@@ -106,6 +107,7 @@ function Portfolio() {
           </div>
         );
       
+        
       case 'contact':
         return (
           <div className="contact-view">
@@ -120,6 +122,86 @@ function Portfolio() {
             </div>
           </div>
         );
+        case 'tools':
+          return (
+            <div className="tools-view">
+              <h2>Programming Languages</h2>
+              <div className="tools-grid">
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                  <span>Python</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                  <span>HTML</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                  <span>CSS</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                  <span>JavaScript</span>
+                </div>
+              </div>
+        
+              <h2>Development Tools</h2>
+              <div className="tools-grid">
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                  <span>React</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                  <span>Node.js</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+                  <span>VS Code</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                  <span>GitHub</span>
+                </div>
+              </div>
+        
+              <h2>IoT & Embedded Systems</h2>
+              <div className="tools-grid">
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" />
+                  <span>Arduino</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi" />
+                  <span>Raspberry Pi</span>
+                </div>
+              </div>
+        
+              <h2>Backend Testing</h2>
+              <div className="tools-grid">
+                <div className="tool-card">
+                  <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" />
+                  <span>Postman</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://jmeter.apache.org/images/logo.svg" alt="JMeter" />
+                  <span>JMeter</span>
+                </div>
+              </div>
+        
+              <h2>UI Testing</h2>
+              <div className="tools-grid">
+                <div className="tool-card">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" />
+                  <span>Selenium</span>
+                </div>
+                <div className="tool-card">
+                  <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="Jest" />
+                  <span>Jest</span>
+                </div>
+              </div>
+            </div>
+          );
       
       default:
         return (
@@ -159,12 +241,7 @@ function Portfolio() {
         >
           Tools
         </button>
-        <button 
-          className={`nav-button ${currentView === 'role' ? 'active' : ''}`}
-          onClick={() => handleNavigation('role')}
-        >
-          My Role
-        </button>
+
         <button 
           className={`nav-button ${currentView === 'contact' ? 'active' : ''}`}
           onClick={() => handleNavigation('contact')}
