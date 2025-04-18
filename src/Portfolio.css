@@ -345,9 +345,37 @@ body {
   .contact-details {
       padding: 0 20px;
   }
+  
 }
 
+/* Update your contact icon styles in Portfolio.css */
+.contact-icon {
+  font-size: 2em; /* Even larger icons */
+  margin-right: 15px;
+  color: var(--primary-color);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); /* Subtle shadow */
+}
+.contact-details p {
+  margin-bottom: 25px;
+  font-size: 20px; /* Larger text */
+}
 
+.contact-details a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Added for better readability */
+}
+
+.contact-details a:hover {
+  color: var(--primary-dark);
+}
+
+/* Optional: Add hover effect to icons */
+.contact-icon:hover {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
 /* Add these animation styles to your Portfolio.css */
 @keyframes fadeInUp {
   from {

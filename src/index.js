@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './Portfolio.css';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Portfolio() {
   const [currentView, setCurrentView] = useState('home');
@@ -17,9 +18,12 @@ function Portfolio() {
             <h1>Jonel Almazan Castillo</h1>
             <h2>Future Software Engineer || Future Quality Automation Engineer</h2>
             
-            <button className="resume-button">
-              View Resume & Cover Letter
-            </button>
+<button 
+  className="resume-button"
+  onClick={() => window.open('/final-resume-jonelc.pdf', '_blank')}
+>
+  View Resume
+</button>
 
             <p className="description">
             Driven by a passion for building reliable, high-quality software that not only works — but works well.
@@ -67,7 +71,8 @@ function Portfolio() {
               
               <h3>Fun Fact About me</h3>
               <p>
-                I love tackling challenges head-on—whether it's debugging code, optimizing networks, 
+                I love tackling challenges head-
+                on—whether it's debugging code, optimizing networks, 
                 or learning a new tool over coffee!
               </p>
             </div>
@@ -108,24 +113,42 @@ function Portfolio() {
         );
       
         
-      case 'contact':
-        return (
-          <div className="contact-view">
-            <div className="contact-container">
-              <div className="contact-card">
-                <div className="contact-details">
-                  <p>Email: <a href="mailto:akosijonel04@gmail.com">akosijonel04@gmail.com</a></p>
-                  <p>LinkedIn: <a href="https://www.linkedin.com/in/castillo-jonel-almazan-7a29091b9/" target="_blank" rel="noopener noreferrer">linkedin.com/in/castillo-jonel-almazan</a></p>
-                  <p>GitHub: <a href="https://github.com/jooo1104" target="_blank" rel="noopener noreferrer">github.com/jooo1104</a></p>
+        case 'contact':
+          return (
+            <div className="contact-view">
+              <div className="contact-container">
+                <div className="contact-card">
+                  <div className="contact-details">
+                    {/* Email with icon */}
+                    <p>
+                      <FaEnvelope className="contact-icon" />
+                      <a href="mailto:akosijonel04@gmail.com">akosijonel04@gmail.com</a>
+                    </p>
+                    
+                    {/* LinkedIn with icon */}
+                    <p>
+                      <FaLinkedin className="contact-icon" />
+                      <a href="https://www.linkedin.com/in/castillo-jonel-almazan-7a29091b9/" target="_blank" rel="noopener noreferrer">
+                        linkedin.com/in/castillo-jonel-almazan
+                      </a>
+                    </p>
+                    
+                    {/* GitHub with icon */}
+                    <p>
+                      <FaGithub className="contact-icon" />
+                      <a href="https://github.com/jooo1104" target="_blank" rel="noopener noreferrer">
+                        github.com/jooo1104
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
+          );
         case 'tools':
           return (
             <div className="tools-view">
-              <h2>Programming Languages</h2>
+              <h2>Tech Stacks</h2>
               <div className="tools-grid">
                 <div className="tool-card">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
