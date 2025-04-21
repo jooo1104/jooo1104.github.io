@@ -277,6 +277,9 @@ function Portfolio() {
       <main className="portfolio-content">
         {renderContent()}
       </main>
+      <footer className="portfolio-footer">
+      © 2025 C, Jonel . All rights reserved.
+    </footer>
     </div>
   );
 }
