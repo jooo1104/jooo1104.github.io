@@ -28,7 +28,7 @@ function Portfolio() {
               }
               }}
               >
-              View Resume
+              Resume || CV
               </button>
  
 
