@@ -18,12 +18,19 @@ function Portfolio() {
             <h1>Jonel Almazan Castillo</h1>
             <h2>Future Software Engineer || Future Quality Automation Engineer</h2>
             
-<button 
-  className="resume-button"
-  onClick={() => window.open('/final-resume-jonelc.pdf', '_blank')}
->
-  View Resume
-</button>
+            <button 
+            className="resume-button"
+            onClick={(e) => {
+              const first = window.open('/final-resume-jonelc.pdf', '_blank');
+              const second = window.open('/CV-Castillo-Jonel.pdf', '_blank');
+              if (!first || !second) {
+                alert('Please allow pop-ups in your browser to view the resumes.');
+              }
+              }}
+              >
+              View Resume
+              </button>
+ 
 
             <p className="description">
             Driven by a passion for building reliable, high-quality software that not only works — but works well.
@@ -276,10 +283,12 @@ function Portfolio() {
       {/* Main Content */}
       <main className="portfolio-content">
         {renderContent()}
-      </main>
-      <footer className="portfolio-footer">
+        <footer className="portfolio-footer">
       © 2025 C, Jonel . All rights reserved.
     </footer>
+    
+      </main>
+    
     </div>
   );
 }
